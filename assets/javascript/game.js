@@ -70,9 +70,11 @@ $(document).ready(function(){
 				});
 			}
 		attackPower += 8
+		
+		if ($(".initial").length <= 0){
+			$(".enemeyAttack").empty();
+			$(".yourAttack").html("Congrats you win!");
+		}
 	});
-	if ($(".initial").length <= 0){
-		$(".enemeyAttack").empty();
-		$(".yourAttack").html("Congrats you win!");
-	}
+	
 });
