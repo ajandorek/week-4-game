@@ -35,7 +35,7 @@ img {
 
 body {
 	background-image: url("../images/background.jpg");
-	background-size: 1000px;
+	background-size: contain;
 	margin: 0 0 100px;
 }
 
