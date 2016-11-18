@@ -87,11 +87,13 @@ $(document).ready(function(){
 						
 						//If no characters are left to attack this code will run and let the user know they won.
 						if ($(".initial").length <= 0){
-							$(".defender").effect("explode").remove();
+							$(".hero").effect("shake", 5000);
+							$(".defender").effect("explode", 5000);
+							setTimeout(function(){$(".defender").remove();}, 5000);
 							$(".enemeyAttack").remove();
 							$(".yourAttack").html("Congrats you win!");
-							alert("You Won!")
-							location.reload();
+							setTimeout(function(){alert("You Won!")}, 5000);
+							setTimeout(function(){location.reload()}, 5000);
 						}
  					}
 
@@ -108,8 +110,9 @@ $(document).ready(function(){
  						
 	 					//If the players health falls below 1 the game will end.
  						if (characters[value].health <= 0){
- 							alert("Game Over :(");
- 							location.reload();
+ 							$(".hero").effect("explode", 5000);
+ 							setTimeout(function(){alert("Game Over :(")}, 5000);
+ 							setTimeout(function(){location.reload()}, 5000);
  						}
 					})
 				});
